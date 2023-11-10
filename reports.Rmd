@@ -1,0 +1,55 @@
+---
+title: "Materiales del Taller"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+```
+
+<body>
+
+<h1>
+
+**Durante el taller los participantes aprenderán a producir tableros de indicadores para reportar el estatus de las comunidades bentónicas muestreadas. Estos son algunos ejemplos de los componentes de los tableros:**
+
+
+## Mapeo de los muestreos de campo
+```{r, echo=FALSE}
+htmltools::tags$iframe(src = "images/interactive_map.html", width="1000px",
+                       height="1000px")
+```
+
+## Visualización de datos de cobertura bentónica
+```{r, echo=FALSE}
+htmltools::tags$iframe(src = "images/boxplot.html", width="1000px",
+                       height="500px")
+```
+
+<img src="images/DSCN8673.JPG" width="400px"/>
+```{r, echo=FALSE}
+htmltools::tags$iframe(src = "images/mollusks_indicator.html", width="600px",
+                       height="800px")
+```
+
+<img src="images/casa_de_gas3.JPEG" width="400px"/>
+```{r, echo=FALSE}
+htmltools::tags$iframe(src = "images/barnacles.html", width="600px",
+                       height="800px")
+```
+
+## Series de tiempo de temperatura superficial del mar
+```{r, echo=FALSE}
+htmltools::tags$iframe(src = "images/sst_time-series.html", width="1000px",
+                       height="500px")
+```
+
+## Anomalías de temperatura superficial del mar
+```{r, echo=FALSE}
+htmltools::tags$iframe(src = "images/sst_clim.html", width="1000px",
+                       height="500px")
+```
+
+
+</h1>
+
+</body>

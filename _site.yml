@@ -1,0 +1,36 @@
+name: "mbon-plankton"
+# exclude: ["survey imagery", "data", "docs/z_*"]
+navbar:
+  title: "MBON Pole to Pole"
+  left:
+    - text: "El Taller"
+      icon: ion-android-home
+      href: index.html
+    - text: "Comité Organizador"
+      icon: ion-ios-people
+      href: committee.html
+    - text: "Participantes"
+      icon: ion-ios-person
+      href: participants.html
+    - text: "Programa"
+      icon: ion-hammer
+      href: programs.html
+    - text: "Materiales"
+      icon: ion-hammer
+      href: reports.html
+      menu:
+      - text: "Indicadores Medioambientales"
+        href: reports.html
+      - text: "Tablero de Indicadores"
+        href: PIMCPA_results.html
+output_dir: "docs"
+output:
+  html_document:
+    theme: cosmo
+    self_contained: false
+    lib_dir: docs/site_libs
+    highlight: textmate
+    include:
+      after_body: _includes/footer.html
+    css: styles.css
+include: [".nojekyll"]

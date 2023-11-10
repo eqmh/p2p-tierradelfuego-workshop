@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Taller de la Red de Monitoreo de Biodiversidad Marina Polo a Polo de las Américas: implementación de monitoreos de biodiversidad en litoral rocoso con uso de foto-cuadrantes y herramientas de Inteligencia Artificial</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MBON Pole to Pole</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="ion ion-android-home"></span>
+     
+    El Taller
+  </a>
+</li>
+<li>
+  <a href="committee.html">
+    <span class="ion ion-ios-people"></span>
+     
+    Comité Organizador
+  </a>
+</li>
+<li>
+  <a href="participants.html">
+    <span class="ion ion-ios-person"></span>
+     
+    Participantes
+  </a>
+</li>
+<li>
+  <a href="programs.html">
+    <span class="ion ion-hammer"></span>
+     
+    Programa
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="ion ion-hammer"></span>
+     
+    Materiales
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="reports.html">Indicadores Medioambientales</a>
+    </li>
+    <li>
+      <a href="PIMCPA_results.html">Tablero de Indicadores</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Taller de la Red de Monitoreo de
+Biodiversidad Marina Polo a Polo de las Américas: implementación de
+monitoreos de biodiversidad en litoral rocoso con uso de foto-cuadrantes
+y herramientas de Inteligencia Artificial</strong></h1>
+
+</div>
+
+
+<body>
+<h2>
+<div
+id="red-de-observación-de-biodiversidad-marina-polo-a-polo-de-las-américas-mbon-pole-to-pole"
+class="section level1">
+<h1><a href="https://marinebon.github.io/p2p/index.html">Red de
+Observación de Biodiversidad Marina Polo a Polo de las Américas (MBON
+Pole to Pole)</a></h1>
+<div id="fechas-27-31-de-marzo-2023" class="section level2">
+<h2>Fechas: 27-31 de marzo, 2023</h2>
+</div>
+<div id="lugar-camarones-chubut---argentina" class="section level2">
+<h2>Lugar: Camarones, Chubut - Argentina</h2>
+<p><br></p>
+<p><a
+href="https://marinelife2030.org/"><img src="images/UNDecade.jpg" width="1000px"/></a></p>
+</h2>
+</body>
+<body>
+<h3>
+<p>Este taller busca capacitar Guardafaunas y Guardaparques de <a
+href="https://www.argentina.gob.ar/parquesnacionales">Parques
+Nacionales</a> y <a
+href="https://chubutpatagonia.gob.ar/areas-naturales-protegidas/">Áreas
+Naturales Protegidas</a> de la costa Argentina y personal científico
+para el monitoreo de la biodiversidad en litorales rocosos de la
+Patagonia usando imágenes (foto-cuadrantes) procesadas con Inteligencia
+Artificial para clasificación de especies bentónicas. </br> <br> Esta
+actividad facilitará la creación de una red de trabajo entre
+Guardafaunas, Guardaparques y científicos para monitorear los cambios a
+largo plazo en los ecosistemas intermareales de fondos rocosos de
+Argentina y aportar datos y conocimiento a gestores ambientales de la
+Argentina y al programa internacional de monitoreo de biodiversidad <a
+href="https://marinebon.github.io/p2p/index.html">MBON Pole to Pole</a>.
+</br> <br> Al final del taller los participantes estarán en capacitadad
+de implementar herramientas para el monitoreo de condiciones
+medioambientales y biodiversidad desarrolladas por el CENPAT y otros
+grupos de la región en el marco del proyecto <a
+href="https://marinebon.github.io/p2p/index.html">MBON Pole to
+Pole</a>.</p>
+<p></br></p>
+</h3>
+</body>
+<p><img src="images/cover.jpg" width="1000px"/></p>
+<body>
+<h3>
+<p>La recopilación de datos de imágenes basada en colecciones de
+foto-cuadrantes se está utilizando ampliamente para estimar la cobertura
+y la densidad de algas e invertebrados marinos en costas rocosas y
+hábitats sumergidos. El programa <a
+href="https://marinebon.github.io/p2p/index.html">MBON Pole to Pole</a>
+está impulsando la adopción de herramientas de seguimiento de la
+biodiversidad con la toma de foto-cuadrantes a lo largo de las Américas.
+El procesamiento y análisis de imágenes se ha realizado normalmente de
+forma manual, por lo que la extracción de información taxonómica a
+partir de imágenes requiere un sistema automatizado para ser operativo.
+Los recientes avances en las herramientas de <em>machine learning</em> y
+la transición a la automatización parcial o total de las anotaciones de
+las imágenes de foto-cuandrantes surgen como una solución a este
+desafío.</p>
+<p><br></p>
+<p>En respuesta a esta necesidad, proveerá de entrenamiento técnico para
+la toma de imágenes de foto-cuadrantes utilizando métodos estandarizados
+y el procesamiento de imágenes utilizando el software <a
+href="https://coralnet.ucsd.edu/">CoralNet</a> para la anotación
+automatizada de especies y la publicación de registros taxonómicos
+basados en imágenes en el Sistema de Información sobre Biodiversidad
+Oceánica (<a href="https://obis.org/">OBIS</a>). Este taller tiene como
+objetivos: - Acelerar la transición de anotaciones manuales a
+automatizadas de foto-cuadrantes; - Entrenar a los participantes en
+herramientas de monitorización de la biodiversidad de los hábitats
+bentónicos; - Formar a los participantes en el manejo de flujo de datos
+para la generación de reportes de biodiversidad</p>
+</h3>
+</body>
+<p><img src="images/sponsors.jpg" width="1000px"/></p>
+</div>
+</div>
+
+<div class="footer text-center">
+  © 2021 <img width="100px" src="images/mbon.jpg"/>
+</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
