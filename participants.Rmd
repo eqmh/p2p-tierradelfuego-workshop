@@ -9,28 +9,18 @@ library(readxl)
 library(knitr)
 ```
 
-<img src="images/muestreo.JPG" width="500px"/>
+<img src="images/PHOTO-2023-04-15-19-33-18.jpeg" width="500px"/>
 
 <body>
 
 <h2>
 
-# El taller contará con la participación de Guardaparques y Guardafaunas de los siguentes [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) y [Áreas Naturales Protegidas](https://chubutpatagonia.gob.ar/areas-naturales-protegidas/):
+# El taller contará con la participación de Guardaparques y Guardafaunas de [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) de Argentina, Universidad de Concepción, Universidad de Valparaíso, y personal de la [Wildlife Conservation Society](https://chile.wcs.org/) de Chile:
 
-- [Campos del Tuyú](https://www.argentina.gob.ar/parquesnacionales/camposdeltuyu)
-- [Islote Lobos](https://www.argentina.gob.ar/parquesnacionales/regionpatagonia/parque-nacional-islote-lobos)
 - [Monte León](https://www.argentina.gob.ar/parquesnacionales/monteleon)
 - [Parques Interjurisdiccionales Marino Costero Patagonia Austral](https://www.argentina.gob.ar/parquesnacionales/marinocostero): 
   + [Isla Pingüino](https://www.argentina.gob.ar/parquesnacionales/islapinguino)
-  + [Makenke](https://www.argentina.gob.ar/parquesnacionales/makenke)
-- [Reservas Naturales de la Defensa](https://www.argentina.gob.ar/parquesnacionales/reservas-naturales-defensa): 
-  + [Punta Buenos Aires](https://www.argentina.gob.ar/parquesnacionales/puntabuenosaires)
-  + [Faro San Antonio](https://web.archive.org/web/20120228014505/http://www.hidro.gov.ar/historia/FSanAntonio.ASP)
-  + [Campo Mar Chiquita-Dragones de Malvinas](https://www.argentina.gob.ar/parquesnacionales/campomarchiquita)
-  + [Baterías-Charles Darwin](https://www.argentina.gob.ar/parquesnacionales/charlesdarwin)
-- [Punta Tombo](https://chubutpatagonia.gob.ar/destino/area-natural-protegida-punta-tombo-terrestre/)
-- [Cabo dos Bahías](https://chubutpatagonia.gob.ar/destino/area-natural-protegida-cabo-dos-bahias/)
-- [Punta Loma](https://chubutpatagonia.gob.ar/destino/area-natural-protegida-punta-loma/)
+- [Parque Karukinka](https://chile.wcs.org/Karukinka.aspx)
 
 </h2>
 

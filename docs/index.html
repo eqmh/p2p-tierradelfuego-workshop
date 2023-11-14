@@ -13,7 +13,7 @@
 
 <title>Taller de la Red de Monitoreo de Biodiversidad Marina Polo a Polo de las Américas: implementación de monitoreos de biodiversidad en litoral rocoso con uso de foto-cuadrantes y herramientas de Inteligencia Artificial</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -143,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -320,42 +317,50 @@ class="section level1">
 <h1><a href="https://marinebon.github.io/p2p/index.html">Red de
 Observación de Biodiversidad Marina Polo a Polo de las Américas (MBON
 Pole to Pole)</a></h1>
-<div id="fechas-27-31-de-marzo-2023" class="section level2">
-<h2>Fechas: 27-31 de marzo, 2023</h2>
+<div id="fechas-22-27-de-enero-2024" class="section level2">
+<h2>Fechas: 22-27 de enero, 2024</h2>
 </div>
-<div id="lugar-camarones-chubut---argentina" class="section level2">
-<h2>Lugar: Camarones, Chubut - Argentina</h2>
+<div id="lugar-ushuaia-tierra-del-fuego---argentina"
+class="section level2">
+<h2>Lugar: Ushuaia, Tierra del Fuego - Argentina</h2>
 <p><br></p>
 <p><a
-href="https://marinelife2030.org/"><img src="images/UNDecade.jpg" width="1000px"/></a></p>
+href="https://marinelife2030.org/"><img src="images/DSCN0951.jpeg" width="1000px"/></a></p>
 </h2>
 </body>
 <body>
 <h3>
-<p>Este taller busca capacitar Guardafaunas y Guardaparques de <a
+<p>Este taller capacitará a estudiantes y profesionales dedicados a la
+conservación y manejo de recursos vivos en el uso de técnicas de
+monitoreo de biodiversidad marina en litoral rocoso intermareal
+utilizando imágenes (foto-cuadrantes) procesadas con Inteligencia
+Artificial para clasificación de especies bentónicas. La actividad busca
+co-implementar una red de monitoreos de biodiversidad iniciados en la
+Patagonia Argentina hacia la costa de Chile con el apoyo de Guardafaunas
+y Guardaparques de <a
 href="https://www.argentina.gob.ar/parquesnacionales">Parques
 Nacionales</a> y <a
 href="https://chubutpatagonia.gob.ar/areas-naturales-protegidas/">Áreas
-Naturales Protegidas</a> de la costa Argentina y personal científico
-para el monitoreo de la biodiversidad en litorales rocosos de la
-Patagonia usando imágenes (foto-cuadrantes) procesadas con Inteligencia
-Artificial para clasificación de especies bentónicas. </br> <br> Esta
-actividad facilitará la creación de una red de trabajo entre
-Guardafaunas, Guardaparques y científicos para monitorear los cambios a
-largo plazo en los ecosistemas intermareales de fondos rocosos de
-Argentina y aportar datos y conocimiento a gestores ambientales de la
-Argentina y al programa internacional de monitoreo de biodiversidad <a
-href="https://marinebon.github.io/p2p/index.html">MBON Pole to Pole</a>.
-</br> <br> Al final del taller los participantes estarán en capacitadad
-de implementar herramientas para el monitoreo de condiciones
-medioambientales y biodiversidad desarrolladas por el CENPAT y otros
-grupos de la región en el marco del proyecto <a
+Naturales Protegidas</a>, y personal científico entrenados en estas
+técnicas en un primer taller llevado a cabo del 27 al 31 de marzo del
+2023 en <a
+href="https://eqmh.github.io/p2p-argentina-workshop/">Camarones,
+Chubut</a>. </br> <br> Esta actividad facilitará la creación de una red
+de trabajo entre Guardafaunas, Guardaparques y científicos para
+monitorear los cambios a largo plazo en los ecosistemas intermareales de
+fondos rocosos de Chile y Argentina, y aportar datos y conocimiento a
+gestores ambientales y al programa internacional de monitoreo de
+biodiversidad <a href="https://marinebon.github.io/p2p/index.html">MBON
+Pole to Pole</a>. </br> <br> Al final del taller los participantes
+estarán en capacitadad de implementar herramientas para el monitoreo de
+condiciones medioambientales y biodiversidad desarrolladas por el CENPAT
+y otros grupos de la región en el marco del proyecto <a
 href="https://marinebon.github.io/p2p/index.html">MBON Pole to
 Pole</a>.</p>
 <p></br></p>
 </h3>
 </body>
-<p><img src="images/cover.jpg" width="1000px"/></p>
+<p><img src="images/DSCN0918.jpeg" width="1000px"/></p>
 <body>
 <h3>
 <p>La recopilación de datos de imágenes basada en colecciones de
@@ -373,18 +378,18 @@ la transición a la automatización parcial o total de las anotaciones de
 las imágenes de foto-cuandrantes surgen como una solución a este
 desafío.</p>
 <p><br></p>
-<p>En respuesta a esta necesidad, proveerá de entrenamiento técnico para
-la toma de imágenes de foto-cuadrantes utilizando métodos estandarizados
-y el procesamiento de imágenes utilizando el software <a
-href="https://coralnet.ucsd.edu/">CoralNet</a> para la anotación
-automatizada de especies y la publicación de registros taxonómicos
-basados en imágenes en el Sistema de Información sobre Biodiversidad
-Oceánica (<a href="https://obis.org/">OBIS</a>). Este taller tiene como
-objetivos: - Acelerar la transición de anotaciones manuales a
-automatizadas de foto-cuadrantes; - Entrenar a los participantes en
-herramientas de monitorización de la biodiversidad de los hábitats
-bentónicos; - Formar a los participantes en el manejo de flujo de datos
-para la generación de reportes de biodiversidad</p>
+<p>En respuesta a esta necesidad, este segundo taller proveerá de
+entrenamiento técnico para la toma de imágenes de foto-cuadrantes
+utilizando métodos estandarizados y el procesamiento de imágenes
+utilizando el software <a href="https://coralnet.ucsd.edu/">CoralNet</a>
+para la anotación automatizada de especies y la publicación de registros
+taxonómicos basados en imágenes en el Sistema de Información sobre
+Biodiversidad Oceánica (<a href="https://obis.org/">OBIS</a>). Este
+taller tiene como objetivos: - Acelerar la transición de anotaciones
+manuales a automatizadas de foto-cuadrantes; - Entrenar a los
+participantes en herramientas de monitorización de la biodiversidad de
+los hábitats bentónicos; - Formar a los participantes en el manejo de
+flujo de datos para la generación de reportes de biodiversidad</p>
 </h3>
 </body>
 <p><img src="images/sponsors.jpg" width="1000px"/></p>
@@ -392,7 +397,7 @@ para la generación de reportes de biodiversidad</p>
 </div>
 
 <div class="footer text-center">
-  © 2021 <img width="100px" src="images/mbon.jpg"/>
+  © 2023 <img width="100px" src="images/mbon.jpg"/>
 </div>
 
 

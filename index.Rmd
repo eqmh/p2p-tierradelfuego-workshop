@@ -16,13 +16,13 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.width=9.5, fig.hei
 
 # [Red de Observación de Biodiversidad Marina Polo a Polo de las Américas (MBON Pole to Pole)](https://marinebon.github.io/p2p/index.html)
 
-## Fechas: 27-31 de marzo, 2023
+## Fechas: 22-27 de enero, 2024
 
-## Lugar: Camarones, Chubut - Argentina
+## Lugar: Ushuaia, Tierra del Fuego - Argentina
 
 <br>
 
-[<img src="images/UNDecade.JPG" width="1000px"/>](https://marinelife2030.org/)
+[<img src="images/DSCN0951.jpeg" width="1000px"/>](https://marinelife2030.org/)
 
 </h2>
 
@@ -32,21 +32,19 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.width=9.5, fig.hei
 
 <h3>
 
-Este taller busca capacitar Guardafaunas y Guardaparques de [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) y [Áreas Naturales Protegidas](https://chubutpatagonia.gob.ar/areas-naturales-protegidas/) de la costa Argentina y personal científico para el
-monitoreo de la biodiversidad en litorales rocosos de la Patagonia
-usando imágenes (foto-cuadrantes) procesadas con Inteligencia Artificial
-para clasificación de especies bentónicas. </br> <br> Esta actividad
-facilitará la creación de una red de trabajo entre Guardafaunas, Guardaparques y
+Este taller capacitará a estudiantes y profesionales dedicados a la conservación y manejo de recursos vivos en el uso de técnicas de monitoreo de biodiversidad  marina en litoral rocoso intermareal utilizando imágenes (foto-cuadrantes) procesadas con Inteligencia Artificial para clasificación de especies bentónicas.  La actividad busca co-implementar una red de monitoreos de biodiversidad iniciados en la Patagonia Argentina hacia la costa de Chile con el apoyo de Guardafaunas y Guardaparques de [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) y [Áreas Naturales Protegidas](https://chubutpatagonia.gob.ar/areas-naturales-protegidas/), y personal científico entrenados en estas técnicas en un primer taller llevado a cabo del 27 al 31 de marzo del 2023 en [Camarones, Chubut](https://eqmh.github.io/p2p-argentina-workshop/).
+</br> <br> 
+Esta actividad facilitará la creación de una red de trabajo entre Guardafaunas, Guardaparques y
 científicos para monitorear los cambios a largo plazo en los ecosistemas
-intermareales de fondos rocosos de Argentina y aportar datos y
-conocimiento a gestores ambientales de la Argentina y al programa
+intermareales de fondos rocosos de Chile y Argentina, y aportar datos y
+conocimiento a gestores ambientales y al programa
 internacional de monitoreo de biodiversidad [MBON Pole to
-Pole](https://marinebon.github.io/p2p/index.html). </br> <br> Al final
-del taller los participantes estarán en capacitadad de implementar
+Pole](https://marinebon.github.io/p2p/index.html). 
+</br> <br> 
+Al final del taller los participantes estarán en capacitadad de implementar
 herramientas para el monitoreo de condiciones medioambientales y
 biodiversidad desarrolladas por el CENPAT y otros grupos de la región en
-el marco del proyecto [MBON Pole to
-Pole](https://marinebon.github.io/p2p/index.html).
+el marco del proyecto [MBON Pole to Pole](https://marinebon.github.io/p2p/index.html).
 
 </br>
 
@@ -54,7 +52,7 @@ Pole](https://marinebon.github.io/p2p/index.html).
 
 </body>
 
-<img src="images/cover.JPG" width="1000px"/>
+<img src="images/DSCN0918.jpeg" width="1000px"/>
 
 <body>
 
@@ -76,7 +74,7 @@ foto-cuandrantes surgen como una solución a este desafío.
 
 <br>
 
-En respuesta a esta necesidad, proveerá de entrenamiento técnico para la
+En respuesta a esta necesidad, este segundo taller proveerá de entrenamiento técnico para la
 toma de imágenes de foto-cuadrantes utilizando métodos estandarizados y
 el procesamiento de imágenes utilizando el software
 [CoralNet](https://coralnet.ucsd.edu/) para la anotación automatizada de

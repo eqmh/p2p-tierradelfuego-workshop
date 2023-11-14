@@ -13,7 +13,7 @@
 
 <title>Participantes del Taller</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -143,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -309,25 +306,19 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="images/muestreo.jpg" width="500px"/></p>
+<p><img src="images/PHOTO-2023-04-15-19-33-18.jpeg" width="500px"/></p>
 <body>
 <h2>
 <div
-id="el-taller-contará-con-la-participación-de-guardaparques-y-guardafaunas-de-los-siguentes-parques-nacionales-y-áreas-naturales-protegidas"
+id="el-taller-contará-con-la-participación-de-guardaparques-y-guardafaunas-de-parques-nacionales-de-argentina-universidad-de-concepción-universidad-de-valparaíso-y-personal-de-la-wildlife-conservation-society-de-chile"
 class="section level1">
 <h1>El taller contará con la participación de Guardaparques y
-Guardafaunas de los siguentes <a
+Guardafaunas de <a
 href="https://www.argentina.gob.ar/parquesnacionales">Parques
-Nacionales</a> y <a
-href="https://chubutpatagonia.gob.ar/areas-naturales-protegidas/">Áreas
-Naturales Protegidas</a>:</h1>
+Nacionales</a> de Argentina, Universidad de Concepción, Universidad de
+Valparaíso, y personal de la <a href="https://chile.wcs.org/">Wildlife
+Conservation Society</a> de Chile:</h1>
 <ul>
-<li><a
-href="https://www.argentina.gob.ar/parquesnacionales/camposdeltuyu">Campos
-del Tuyú</a></li>
-<li><a
-href="https://www.argentina.gob.ar/parquesnacionales/regionpatagonia/parque-nacional-islote-lobos">Islote
-Lobos</a></li>
 <li><a
 href="https://www.argentina.gob.ar/parquesnacionales/monteleon">Monte
 León</a></li>
@@ -338,42 +329,16 @@ Interjurisdiccionales Marino Costero Patagonia Austral</a>:
 <li><a
 href="https://www.argentina.gob.ar/parquesnacionales/islapinguino">Isla
 Pingüino</a></li>
-<li><a
-href="https://www.argentina.gob.ar/parquesnacionales/makenke">Makenke</a></li>
 </ul></li>
-<li><a
-href="https://www.argentina.gob.ar/parquesnacionales/reservas-naturales-defensa">Reservas
-Naturales de la Defensa</a>:
-<ul>
-<li><a
-href="https://www.argentina.gob.ar/parquesnacionales/puntabuenosaires">Punta
-Buenos Aires</a></li>
-<li><a
-href="https://web.archive.org/web/20120228014505/http://www.hidro.gov.ar/historia/FSanAntonio.ASP">Faro
-San Antonio</a></li>
-<li><a
-href="https://www.argentina.gob.ar/parquesnacionales/campomarchiquita">Campo
-Mar Chiquita-Dragones de Malvinas</a></li>
-<li><a
-href="https://www.argentina.gob.ar/parquesnacionales/charlesdarwin">Baterías-Charles
-Darwin</a></li>
-</ul></li>
-<li><a
-href="https://chubutpatagonia.gob.ar/destino/area-natural-protegida-punta-tombo-terrestre/">Punta
-Tombo</a></li>
-<li><a
-href="https://chubutpatagonia.gob.ar/destino/area-natural-protegida-cabo-dos-bahias/">Cabo
-dos Bahías</a></li>
-<li><a
-href="https://chubutpatagonia.gob.ar/destino/area-natural-protegida-punta-loma/">Punta
-Loma</a></li>
+<li><a href="https://chile.wcs.org/Karukinka.aspx">Parque
+Karukinka</a></li>
 </ul>
 </h2>
 </body>
 </div>
 
 <div class="footer text-center">
-  © 2021 <img width="100px" src="images/mbon.jpg"/>
+  © 2023 <img width="100px" src="images/mbon.jpg"/>
 </div>
 
 
