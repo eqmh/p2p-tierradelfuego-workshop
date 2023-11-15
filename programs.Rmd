@@ -9,37 +9,37 @@ editor_options:
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
-<img src="images/playa_cordon3.JPEG" width="2000px"/>
+<img src="images/DSCN0948.JPEG" width="2000px"/>
 
 <body>
 
 <h2>
 
-## **DIA 1 -- Lunes 27 de marzo: Camarones**
+## **DIA 1 -- Lunes 22 de enero**
 
 -   Teoría sobre biodiversidad de ambientes intermareales rocosos de Patagonia
 -   Protocolos de muestreo con inteligencia artificial
 -   Demostración de datos previos y plataforma MBON para detectar cambios de biodiversidad <br> <br>
 
-## **DIA 2 -- Martes 28 de marzo: Bahía Bustamante** 
+## **DIA 2 -- Martes 23 de enero** 
 
--   Muestreo intermareal con fotocuadrantes en Parque Nacional sobre Bahía Bustamante
+-   Muestreo intermareal con fotocuadrantes en XXX
 -   Uso de cámaras y equipos para muestreo de biodiversidad intermareal 
 -   Optimización de fotografías para utilizar inteligencia artificial, uso de software de imágenes 
 -   Utilización de software de inteligencia artificial para análisis de biodiversidad marina <br> <br>
 
-## **DIA 3 -- Miércoles 29 de marzo: Camarones** 
+## **DIA 3 -- Miércoles 24 de enero** 
 
 -   Manejo y análisis de datos
 -   Bases de datos abiertas para registros de biodiversidad [OBIS](obis.org)
 -   Análisis de fotografías digitales con inteligencia artificial <br> <br>
 
-## **DIA 4 -- Jueves 30- de marzo: Camarones** 
+## **DIA 4 -- Jueves 25 de enero** 
 
 -   Continuación de análisis de fotografías digitales con IA tomadas durante la capacitación
 -   Generación de reporte de indicadores de biodiversidad con [tableros interactivos](https://marinebon.github.io/p2p-dashboard/biodivExplorer_beach.html#general-information) <br> <br>
 
-## **DIA 5 -- Viernes 31 de marzo: Camarones** 
+## **DIA 5 -- Viernes 26 de enero** 
 
 -   Análisis grupal de los datos subidos, comparaciones con otros datos de Argentina
 -   Discusión acerca de aplicación de resultados al manejo de ecosistemas costeros e implementación en Parques Nacionales Marinos
@@ -56,8 +56,8 @@ library(sf)
 
 pts <- tribble(
         ~lon,       ~lat,       ~name,    ~icon,   ~color,          ~description, ~comment,
-  -65.702042, -44.801439,  "Rocas Coloradas", "home", "red", "Rocas Coloradas", NA,
-  -65.5555, -44.910077,  "PIMCPA: Cabo dos Bahías", "home", "red", "PIMCPA", NA) %>%
+  -68.3289, -54.8225,  "CADIC", "home", "red", "CADIC", NA,
+  -68.4845, -54.8475,  "Ensenada Zaratiegui", "home", "red", "Ensenada Zaratiegui", NA) %>%
   st_as_sf(coords = c("lon", "lat"), crs = 4326)
 ctr <- pts$geometry %>% st_geometrycollection() %>% st_centroid() %>% st_coordinates()
 icons <- awesomeIcons(
@@ -73,11 +73,10 @@ leaflet(pts, options = leafletOptions(attributionControl=F), height=600, width=1
 ```
  <br> <br>
 
-## **Algunas localidades a monitotear post taller**
+## **Localidad para el entrenamiento de campo del taller: Ensenada Zaratiegui**
 
-<img src="images/casadegas.JPG" width="4000px"/> <br>
+<img src="images/ensenada_zaratiegui.png" width="4000px"/> <br>
 
-<img src="images/playacordon.JPG" width="4000px"/> <br>
 
 </h2>
 

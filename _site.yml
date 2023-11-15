@@ -20,9 +20,9 @@ navbar:
       href: reports.html
       menu:
       - text: "Indicadores Medioambientales"
-        href: reports.html
+        href: ISLAPINGUINO.html
       - text: "Tablero de Indicadores"
-        href: PIMCPA_results.html
+        href: AMPsArgentina.html
 output_dir: "docs"
 output:
   html_document:
