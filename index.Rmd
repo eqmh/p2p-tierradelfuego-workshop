@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.width=9.5, fig.hei
 
 # [Red de Observación de Biodiversidad Marina Polo a Polo de las Américas (MBON Pole to Pole)](https://marinebon.github.io/p2p/index.html)
 
-## Fechas: 22-27 de enero, 2024
+## Fechas: 22-26 de enero, 2024
 
 ## Lugar: Ushuaia, Tierra del Fuego - Argentina
 

@@ -57,7 +57,7 @@ library(sf)
 pts <- tribble(
         ~lon,       ~lat,       ~name,    ~icon,   ~color,          ~description, ~comment,
   -68.3289, -54.8225,  "CADIC", "home", "red", "CADIC", NA,
-  -68.4845, -54.8475,  "Ensenada Zaratiegui", "home", "red", "Ensenada Zaratiegui", NA) %>%
+  -68.4845, -54.8475,  "Ensenada Zaratiegui", "child", "orange", "Ensenada Zaratiegui", NA) %>%
   st_as_sf(coords = c("lon", "lat"), crs = 4326)
 ctr <- pts$geometry %>% st_geometrycollection() %>% st_centroid() %>% st_coordinates()
 icons <- awesomeIcons(
@@ -69,7 +69,7 @@ leaflet(pts, options = leafletOptions(attributionControl=F), height=600, width=1
   #addProviderTiles(provider = providers$Stamen.TonerLite) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   addAwesomeMarkers(icon = icons, label= ~name, labelOptions = labelOptions(noHide = T)) %>%
-  setView(ctr[,"X"], ctr[,"Y"], zoom=7)
+  setView(ctr[,"X"], ctr[,"Y"], zoom=11)
 ```
  <br> <br>
 
