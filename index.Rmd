@@ -69,7 +69,7 @@ análisis de imágenes se ha realizado normalmente de forma manual, por lo
 que la extracción de información taxonómica a partir de imágenes
 requiere un sistema automatizado para ser operativo. Los recientes
 avances en las herramientas de *machine learning* y la transición a la
-automatización parcial o total de las anotaciones de las imágenes de
+automatización parcial o total de las anotaciones taxonómicas de las imágenes de
 foto-cuandrantes surgen como una solución a este desafío.
 
 <br>
