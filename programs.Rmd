@@ -9,7 +9,7 @@ editor_options:
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
-<img src="images/DSCN0948.JPEG" width="2000px"/>
+<img src="images/ushuaia2.JPEG" width="2000px"/>
 
 <body>
 

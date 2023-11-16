@@ -13,7 +13,7 @@
 
 <title>Participantes del Taller</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -143,15 +143,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -180,8 +176,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -189,9 +185,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -282,10 +285,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="reports.html">Indicadores Medioambientales</a>
+      <a href="ISLAPINGUINO.html">Indicadores Medioambientales</a>
     </li>
     <li>
-      <a href="PIMCPA_results.html">Tablero de Indicadores</a>
+      <a href="AMPsArgentina.html">Tablero de Indicadores</a>
     </li>
   </ul>
 </li>
@@ -310,14 +313,17 @@ $(document).ready(function () {
 <body>
 <h2>
 <div
-id="el-taller-contará-con-la-participación-de-guardaparques-y-guardafaunas-de-parques-nacionales-de-argentina-universidad-de-concepción-universidad-de-valparaíso-y-personal-de-la-wildlife-conservation-society-de-chile"
+id="el-taller-contará-con-la-participación-de-guardaparques-y-guardafaunas-de-parques-nacionales-de-argentina-centro-ideal-algalab-de-la-universidad-de-concepción-universidad-de-valparaíso-y-personal-de-la-wildlife-conservation-society-de-chile"
 class="section level1">
 <h1>El taller contará con la participación de Guardaparques y
 Guardafaunas de <a
 href="https://www.argentina.gob.ar/parquesnacionales">Parques
-Nacionales</a> de Argentina, Universidad de Concepción, Universidad de
-Valparaíso, y personal de la <a href="https://chile.wcs.org/">Wildlife
-Conservation Society</a> de Chile:</h1>
+Nacionales</a> de Argentina, <a href="https://centroideal.cl/">Centro
+IDEAL</a>, <a href="https://www.algalab.com/index2.html#">Algalab</a> de
+la <a href="https://www.udec.cl/">Universidad de Concepción</a>, <a
+href="https://uv.cl/">Universidad de Valparaíso</a>, y personal de la <a
+href="https://chile.wcs.org/">Wildlife Conservation Society</a> de
+Chile:</h1>
 <ul>
 <li><a
 href="https://www.argentina.gob.ar/parquesnacionales/monteleon">Monte

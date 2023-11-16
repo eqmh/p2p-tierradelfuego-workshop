@@ -9,9 +9,15 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 <h3>
 
+<img src="images/marielagauna.jpeg" width="500px"/>
+
+**Mariela Gauna** es Licenciada  en Turismo dedicada al trabajo en las áreas protegidas. El privilegio de trabajar en Parques Nacionales la llevó a vivir en Iguazú en la provincia de Misiones, Quebrada del Condorito en Córdoba, Los Alerces en Chubut y actualmente abrazar la estepa y la costa del litoral marino en Monte León, provincia de Santa Cruz. En este recorrido se especializó en la gestión de proyectos de conservación y uso público, planificación de áreas protegidas, y la evaluación de impactos antrópicos en los Parques Nacionales. Desde diciembre del 2021 administra el [Parque Nacional Monte León](https://www.argentina.gob.ar/parquesnacionales/monteleon) e impulsa la creación del Parque Interjurisdiccional Marino Monte León. 
+
+</br>
+
 <img src="images/arielalbertani.png" width="500px"/>
 
-**Ariel Albertani** es Guardaparque Nacional y Técnico en Áreas Protegidas de Administración de Parques Nacionales especializado en Manejo y Conservación de Áreas Protegidas. Tiene mas de 25 años al servicio de la conservación, con experiencia en el manejo de áreas protegidas continentales como el Parque Nacional Los Alerces, Sitio de Patrimonio Natural de la Humanidad, donde me formó en todas las tareas propias de la función, control y vigilancia, patrullaje, fiscalización, monitoreo, educación ambiental, manejo de personal y de grupos, liderazgo, atención de emergencias, planificación, administración y gestión. Ariel es aficionado a la náutica, el buceo y las actividades al aire libre. Desde mediados del 2020 administra el Parque Interjurisdiccional Marino Isla Pingüino, ubicado al Noroeste de la Provincia de Santa Cruz con una superficie de 159.526ha de mar, sobre el litoral patagónico. 
+**Ariel Albertani** es Guardaparque Nacional y Técnico en Áreas Protegidas de Administración de Parques Nacionales especializado en Manejo y Conservación de Áreas Protegidas. Tiene mas de 25 años al servicio de la conservación, con experiencia en el manejo de áreas protegidas continentales como el Parque Nacional Los Alerces, Sitio de Patrimonio Natural de la Humanidad, donde me formó en todas las tareas propias de la función, control y vigilancia, patrullaje, fiscalización, monitoreo, educación ambiental, manejo de personal y de grupos, liderazgo, atención de emergencias, planificación, administración y gestión. Ariel es aficionado a la náutica, el buceo y las actividades al aire libre. Desde mediados del 2020 administra el [Parque Interjurisdiccional Marino Isla Pingüino](https://www.argentina.gob.ar/parquesnacionales/islapinguino), ubicado al Noroeste de la Provincia de Santa Cruz con una superficie de 159.526ha de mar, sobre el litoral patagónico. 
 
 </br>
 

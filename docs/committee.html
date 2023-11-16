@@ -13,7 +13,7 @@
 
 <title>Instructores</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -143,15 +143,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -180,8 +176,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -189,9 +185,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -282,10 +285,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="reports.html">Indicadores Medioambientales</a>
+      <a href="ISLAPINGUINO.html">Indicadores Medioambientales</a>
     </li>
     <li>
-      <a href="PIMCPA_results.html">Tablero de Indicadores</a>
+      <a href="AMPsArgentina.html">Tablero de Indicadores</a>
     </li>
   </ul>
 </li>
@@ -308,6 +311,20 @@ $(document).ready(function () {
 
 <body>
 <h3>
+<p><img src="images/marielagauna.jpeg" width="500px"/></p>
+<p><strong>Mariela Gauna</strong> es Licenciada en Turismo dedicada al
+trabajo en las áreas protegidas. El privilegio de trabajar en Parques
+Nacionales la llevó a vivir en Iguazú en la provincia de Misiones,
+Quebrada del Condorito en Córdoba, Los Alerces en Chubut y actualmente
+abrazar la estepa y la costa del litoral marino en Monte León, provincia
+de Santa Cruz. En este recorrido se especializó en la gestión de
+proyectos de conservación y uso público, planificación de áreas
+protegidas, y la evaluación de impactos antrópicos en los Parques
+Nacionales. Desde diciembre del 2021 administra el <a
+href="https://www.argentina.gob.ar/parquesnacionales/monteleon">Parque
+Nacional Monte León</a> e impulsa la creación del Parque
+Interjurisdiccional Marino Monte León.</p>
+<p></br></p>
 <p><img src="images/arielalbertani.png" width="500px"/></p>
 <p><strong>Ariel Albertani</strong> es Guardaparque Nacional y Técnico
 en Áreas Protegidas de Administración de Parques Nacionales
@@ -319,10 +336,11 @@ tareas propias de la función, control y vigilancia, patrullaje,
 fiscalización, monitoreo, educación ambiental, manejo de personal y de
 grupos, liderazgo, atención de emergencias, planificación,
 administración y gestión. Ariel es aficionado a la náutica, el buceo y
-las actividades al aire libre. Desde mediados del 2020 administra el
-Parque Interjurisdiccional Marino Isla Pingüino, ubicado al Noroeste de
-la Provincia de Santa Cruz con una superficie de 159.526ha de mar, sobre
-el litoral patagónico.</p>
+las actividades al aire libre. Desde mediados del 2020 administra el <a
+href="https://www.argentina.gob.ar/parquesnacionales/islapinguino">Parque
+Interjurisdiccional Marino Isla Pingüino</a>, ubicado al Noroeste de la
+Provincia de Santa Cruz con una superficie de 159.526ha de mar, sobre el
+litoral patagónico.</p>
 <p></br></p>
 <p><img src="images/GBigatti.jpg" width="500px"/></p>
 <p><strong>Gregorio Bigatti</strong> obtuvo su titulo de Licenciado y

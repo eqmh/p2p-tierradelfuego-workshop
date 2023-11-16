@@ -15,7 +15,7 @@ library(knitr)
 
 <h2>
 
-# El taller contará con la participación de Guardaparques y Guardafaunas de [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) de Argentina, Universidad de Concepción, Universidad de Valparaíso, y personal de la [Wildlife Conservation Society](https://chile.wcs.org/) de Chile:
+# El taller contará con la participación de Guardaparques y Guardafaunas de [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) de Argentina, [Centro IDEAL](https://centroideal.cl/), [Algalab](https://www.algalab.com/index2.html#) de la [Universidad de Concepción](https://www.udec.cl/), [Universidad de Valparaíso](https://uv.cl/), y personal de la [Wildlife Conservation Society](https://chile.wcs.org/) de Chile:
 
 - [Monte León](https://www.argentina.gob.ar/parquesnacionales/monteleon)
 - [Parques Interjurisdiccionales Marino Costero Patagonia Austral](https://www.argentina.gob.ar/parquesnacionales/marinocostero): 
