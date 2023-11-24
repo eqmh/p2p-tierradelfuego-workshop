@@ -13,7 +13,7 @@
 
 <title>Agenda y Logística del Taller</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -156,11 +156,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -189,8 +193,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -198,16 +202,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -383,8 +380,8 @@ ecosistemas costeros e implementación en Parques Nacionales Marinos</li>
 <h2><a href="cronograma_actividades_marzo_2023_final.pdf"><strong>Agenda
 detallada</strong></a></h2>
 <p><br> <br></p>
-<div id="htmlwidget-cbd2af048a841b770ce5" style="width:1000px;height:600px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cbd2af048a841b770ce5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"attributionControl":false},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addAwesomeMarkers","args":[[-54.8225,-54.8475],[-68.3289,-68.4845],{"icon":["home","child"],"markerColor":["red","orange"],"iconColor":"black","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CADIC","Ensenada Zaratiegui"],{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-54.8475,-54.8225],"lng":[-68.4845,-68.3289]},"setView":[[-54.835,-68.4067],11,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3805a03904b1219d004c" style="width:1000px;height:600px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3805a03904b1219d004c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"attributionControl":false},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addAwesomeMarkers","args":[[-54.8225,-54.8475],[-68.3289,-68.4845],{"icon":["home","child"],"markerColor":["red","orange"],"iconColor":"black","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CADIC","Ensenada Zaratiegui"],{"interactive":false,"permanent":true,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-54.8475,-54.8225],"lng":[-68.4845,-68.3289]},"setView":[[-54.835,-68.4067],11,[]]},"evals":[],"jsHooks":[]}</script>
 <p><br> <br></p>
 </div>
 <div
@@ -392,6 +389,11 @@ id="localidad-para-el-entrenamiento-de-campo-del-taller-ensenada-zaratiegui"
 class="section level2">
 <h2><strong>Localidad para el entrenamiento de campo del taller:
 Ensenada Zaratiegui</strong></h2>
+<p><img src="images/zaratiegui6.jpeg" width="4000px"/></p>
+<p><img src="images/zaratiegui4.jpeg" width="4000px"/></p>
+<p><img src="images/zaratiegui1.jpeg" width="4000px"/></p>
+<p><img src="images/zaratiegui5.jpeg" width="4000px"/></p>
+<p><img src="images/zaratiegui7.jpeg" width="4000px"/></p>
 <p><img src="images/ensenada_zaratiegui.png" width="4000px"/> <br></p>
 </h2>
 </body>

@@ -75,6 +75,16 @@ leaflet(pts, options = leafletOptions(attributionControl=F), height=600, width=1
 
 ## **Localidad para el entrenamiento de campo del taller: Ensenada Zaratiegui**
 
+<img src="images/zaratiegui6.jpeg" width="4000px"/> 
+
+<img src="images/zaratiegui4.jpeg" width="4000px"/> 
+
+<img src="images/zaratiegui1.jpeg" width="4000px"/> 
+
+<img src="images/zaratiegui5.jpeg" width="4000px"/> 
+
+<img src="images/zaratiegui7.jpeg" width="4000px"/> 
+
 <img src="images/ensenada_zaratiegui.png" width="4000px"/> <br>
 
 
