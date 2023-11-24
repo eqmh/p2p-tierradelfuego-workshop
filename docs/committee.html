@@ -11,9 +11,9 @@
 
 
 
-<title>Instructores</title>
+<title>Organizadores e Instructores del Taller</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -143,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -304,13 +301,26 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Instructores</h1>
+<h1 class="title toc-ignore">Organizadores e Instructores del
+Taller</h1>
 
 </div>
 
 
 <body>
 <h3>
+<p><img src="images/mariabagur.jpeg" width="500px"/></p>
+<p><strong>María Bagur</strong> es doctora en Ciencias Biológicas de la
+Universidad Nacional de Mar del Plata. Actualmente es Investigadora
+Adjunta de CONICET del Centro Austral de Investigaciones Científicas (<a
+href="https://cadic.conicet.gov.ar/">CADIC</a>) de la ciudad de Ushuaia,
+en la cual reside desde 2018. María ha participado en distintos
+proyectos de investigación estudiando intermareales rocosos a lo largo
+de la costa argentina y actualmente se dedica al estudio ecológico de
+los bosques de macroalgas en el Canal Beagle. Es buza científica y ha
+participado en distintas expediciones y trabajos de divulgación sobre la
+fauna y flora marina de la región.</p>
+<p></br></p>
 <p><img src="images/marielagauna.jpeg" width="500px"/></p>
 <p><strong>Mariela Gauna</strong> es Licenciada en Turismo dedicada al
 trabajo en las áreas protegidas. El privilegio de trabajar en Parques

@@ -1,5 +1,5 @@
 ---
-title: "Instructores"
+title: "Organizadores e Instructores del Taller"
 ---
 
 ```{r setup, include=FALSE}
@@ -8,6 +8,12 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 <body>
 
 <h3>
+
+<img src="images/mariabagur.jpeg" width="500px"/>
+
+**María Bagur** es doctora en Ciencias Biológicas de la Universidad Nacional de Mar del Plata. Actualmente es Investigadora Adjunta de CONICET del Centro Austral de Investigaciones Científicas ([CADIC](https://cadic.conicet.gov.ar/)) de la ciudad de Ushuaia, en la cual reside desde 2018. María ha participado en distintos proyectos de investigación estudiando intermareales rocosos a lo largo de la costa argentina y actualmente se dedica al estudio ecológico de los bosques de macroalgas en el Canal Beagle. Es buza científica y ha participado en distintas expediciones y trabajos de divulgación sobre la fauna y flora marina de la región.
+
+</br>
 
 <img src="images/marielagauna.jpeg" width="500px"/>
 
