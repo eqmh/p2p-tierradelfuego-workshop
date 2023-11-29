@@ -18,12 +18,12 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ## **DIA 1 -- Lunes 22 de enero**
 
 -   Teoría sobre biodiversidad de ambientes intermareales rocosos de Patagonia
--   Protocolos de muestreo con inteligencia artificial
+-   Protocolos de muestreo de biodiversidad del litoral rocoso con foto-cuadrantes
 -   Demostración de datos previos y plataforma MBON para detectar cambios de biodiversidad <br> <br>
 
 ## **DIA 2 -- Martes 23 de enero** 
 
--   Muestreo intermareal con fotocuadrantes en XXX
+-   Muestreo del intermareal con fotocuadrantes en Ensenada Zaratiegui
 -   Uso de cámaras y equipos para muestreo de biodiversidad intermareal 
 -   Optimización de fotografías para utilizar inteligencia artificial, uso de software de imágenes 
 -   Utilización de software de inteligencia artificial para análisis de biodiversidad marina <br> <br>
@@ -42,8 +42,8 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ## **DIA 5 -- Viernes 26 de enero** 
 
 -   Análisis grupal de los datos subidos, comparaciones con otros datos de Argentina
--   Discusión acerca de aplicación de resultados al manejo de ecosistemas costeros e implementación en Parques Nacionales Marinos
--   Coordinación de muestreos futuros en las distintas localidades
+-   Discusión acerca de aplicación de resultados al manejo de ecosistemas costeros e implementación en Áreas Protegidas Marinas
+-   Coordinación de muestreos futuros en las distintas localidades en Tierra del Fuego y la costa de Chile.
 -   Entrega formal de equipamiento para muestreo a largo plazo <br> <br>
 
 ## [**Agenda detallada**](cronograma_actividades_marzo_2023_final.pdf)
