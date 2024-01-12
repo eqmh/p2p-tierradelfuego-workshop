@@ -13,7 +13,7 @@
 
 <title>Participantes del Taller</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -143,15 +143,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -180,8 +176,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -189,9 +185,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -310,7 +313,7 @@ $(document).ready(function () {
 <body>
 <h2>
 <div
-id="el-taller-contará-con-la-participación-de-guardaparques-y-guardafaunas-de-parques-nacionales-de-argentina-centro-ideal-algalab-de-la-universidad-de-concepción-universidad-de-valparaíso-y-personal-de-la-wildlife-conservation-society-de-chile"
+id="el-taller-contará-con-la-participación-de-guardaparques-y-guardafaunas-de-parques-nacionales-de-argentina-centro-ideal-algalab-de-la-universidad-de-concepción-universidad-de-valparaíso-investigadores-de-la-universidad-nacional-de-tierra-del-fuego-funcionarios-de-la-secretaría-de-ambiente-de-tierra-del-fuego-personal-de-la-wildlife-conservation-society-de-chile-y-clubes-de-ciencia-de-tierra-del-fuego"
 class="section level1">
 <h1>El taller contará con la participación de Guardaparques y
 Guardafaunas de <a
@@ -318,10 +321,18 @@ href="https://www.argentina.gob.ar/parquesnacionales">Parques
 Nacionales</a> de Argentina, <a href="https://centroideal.cl/">Centro
 IDEAL</a>, <a href="https://www.algalab.com/index2.html#">Algalab</a> de
 la <a href="https://www.udec.cl/">Universidad de Concepción</a>, <a
-href="https://uv.cl/">Universidad de Valparaíso</a>, y personal de la <a
+href="https://uv.cl/">Universidad de Valparaíso</a>, investigadores de
+la <a href="https://untdf.edu.ar/">Universidad Nacional de Tierra del
+Fuego</a>, funcionarios de la <a
+href="https://prodyambiente.tierradelfuego.gob.ar/secretaria-de-ambiente/">Secretaría
+de Ambiente de Tierra del Fuego</a>, personal de la <a
 href="https://chile.wcs.org/">Wildlife Conservation Society</a> de
-Chile:</h1>
+Chile, y <a
+href="https://cyt.tierradelfuego.gob.ar/club-de-ciencias/">clubes de
+ciencia de Tierra del Fuego</a>:</h1>
 <ul>
+<li><a href="https://turismoushuaia.com/zonas/parque-nacional/">Parque
+Nacional Tierra del Fuego</a></li>
 <li><a
 href="https://www.argentina.gob.ar/parquesnacionales/monteleon">Monte
 León</a></li>
@@ -336,6 +347,281 @@ Pingüino</a></li>
 <li><a href="https://chile.wcs.org/Karukinka.aspx">Parque
 Karukinka</a></li>
 </ul>
+<p><br><br></p>
+</div>
+<div id="lista-de-participantes" class="section level1">
+<h1><strong>Lista de Participantes</strong></h1>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="13%" />
+<col width="46%" />
+<col width="6%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Nombre</th>
+<th align="left">Apellido</th>
+<th align="left">Afiliación</th>
+<th align="left">País</th>
+<th align="left">Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Enrique</td>
+<td align="left">Montes</td>
+<td align="left">U. Miami CIMAS / NOAA AOML</td>
+<td align="left">USA</td>
+<td align="left">Organizador principal / Instructor</td>
+</tr>
+<tr class="even">
+<td align="left">Gregorio</td>
+<td align="left">Bigatti</td>
+<td align="left">IBIOMAR / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Organizador principal / Instructor</td>
+</tr>
+<tr class="odd">
+<td align="left">Erasmo</td>
+<td align="left">Macaya</td>
+<td align="left">Universidad de Concepción</td>
+<td align="left">Chile</td>
+<td align="left">Organizador principal / Instructor</td>
+</tr>
+<tr class="even">
+<td align="left">Gonzalo</td>
+<td align="left">Bravo</td>
+<td align="left">IBIOMAR / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Organizador / Instructor</td>
+</tr>
+<tr class="odd">
+<td align="left">María</td>
+<td align="left">Bagur</td>
+<td align="left">CADIC / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Organizador/ Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Ian</td>
+<td align="left">Walker</td>
+<td align="left">APN Makenke</td>
+<td align="left">Argentina</td>
+<td align="left">Instructor</td>
+</tr>
+<tr class="odd">
+<td align="left">Ariel</td>
+<td align="left">Rodriguez Albertani</td>
+<td align="left">APN Isla Pingüino</td>
+<td align="left">Argentina</td>
+<td align="left">Instructor</td>
+</tr>
+<tr class="even">
+<td align="left">Mariela</td>
+<td align="left">Gauna</td>
+<td align="left">APN Monte Leon</td>
+<td align="left">Argentina</td>
+<td align="left">Instructor</td>
+</tr>
+<tr class="odd">
+<td align="left">Javiera</td>
+<td align="left">Constanzo</td>
+<td align="left">WCS Chile - Parque Karukinka</td>
+<td align="left">Chile</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Cláudia</td>
+<td align="left">Pereira</td>
+<td align="left">WCS Chile - Parque Karukinka</td>
+<td align="left">Chile</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Claudia</td>
+<td align="left">Betancourt</td>
+<td align="left">Universidad Austral - Valdivia</td>
+<td align="left">Chile</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Nelson</td>
+<td align="left">Valdivia</td>
+<td align="left">Universidad Austral - Valdivia</td>
+<td align="left">Chile</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Kai</td>
+<td align="left">Giancaspero Vilaza</td>
+<td align="left">Universidad de Valparaíso - Valparaíso</td>
+<td align="left">Chile</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Eloisa</td>
+<td align="left">Gimenez</td>
+<td align="left">Clubes de Ciencia Tierra del Fuego</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Yamila Natalia</td>
+<td align="left">Nohra</td>
+<td align="left">Secretaría de Ambiente - Tierra del Fuego (Ushuaia)
+Recursos Hidricos</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Julieta</td>
+<td align="left">Kaminsky</td>
+<td align="left">CADIC / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Matias</td>
+<td align="left">Delpiani</td>
+<td align="left">CADIC / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Gabriela</td>
+<td align="left">Garraza</td>
+<td align="left">CADIC / CONICET -UNTDF</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Malena</td>
+<td align="left">Pfoh</td>
+<td align="left">CADIC / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Cecilia</td>
+<td align="left">Alonso</td>
+<td align="left">U. Nacional Tierra del Fuego / Secretaría de Pesca
+Tierra del Fuego</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Lu</td>
+<td align="left">Chiberry</td>
+<td align="left">CADIC / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Guillermina</td>
+<td align="left">Massaccesi</td>
+<td align="left">APN Ushuaia</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Luciana</td>
+<td align="left">Acuña</td>
+<td align="left">APN Ushuaia</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Evelyn</td>
+<td align="left">Contreras Flores</td>
+<td align="left">APN Ushuaia</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Juan</td>
+<td align="left">Alderete Mayorga</td>
+<td align="left">Secretaria de Ambiente (Rio Grande)</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Emanuel</td>
+<td align="left">Mendieta</td>
+<td align="left">Secretaria de Ambiente (Rio Grande)</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Lorena</td>
+<td align="left">Ladux</td>
+<td align="left">Secretaria de Ambiente - (Rio Grande )</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Agustín</td>
+<td align="left">Ramos</td>
+<td align="left">Areas Naturales Protegidas del Municipio de Río
+Grande</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Andrés</td>
+<td align="left">Fernandez</td>
+<td align="left">Secretaria de Ambiente - Tierra del Fuego
+(Ushuaia)</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">María Laura</td>
+<td align="left">Flotron</td>
+<td align="left">Secretaria de Ambiente - Tierra del Fuego
+(Ushuaia)</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">María Luisa</td>
+<td align="left">Carranza</td>
+<td align="left">Secretaria de Ambiente - Tierra del Fuego
+(Ushuaia)</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Lida E.</td>
+<td align="left">Pimper</td>
+<td align="left">APN Ushuaia</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Ignacio</td>
+<td align="left">Chiesa</td>
+<td align="left">CADIC / CONICET</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="even">
+<td align="left">Lucía</td>
+<td align="left">Rodríguez Planes</td>
+<td align="left">APN División Regional</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+<tr class="odd">
+<td align="left">Francisco</td>
+<td align="left">Zunino</td>
+<td align="left">APN División Regional</td>
+<td align="left">Argentina</td>
+<td align="left">Participante</td>
+</tr>
+</tbody>
+</table>
 </h2>
 </body>
 </div>

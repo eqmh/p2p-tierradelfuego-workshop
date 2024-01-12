@@ -15,12 +15,21 @@ library(knitr)
 
 <h2>
 
-# El taller contará con la participación de Guardaparques y Guardafaunas de [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) de Argentina, [Centro IDEAL](https://centroideal.cl/), [Algalab](https://www.algalab.com/index2.html#) de la [Universidad de Concepción](https://www.udec.cl/), [Universidad de Valparaíso](https://uv.cl/), y personal de la [Wildlife Conservation Society](https://chile.wcs.org/) de Chile:
+# El taller contará con la participación de Guardaparques y Guardafaunas de [Parques Nacionales](https://www.argentina.gob.ar/parquesnacionales) de Argentina, [Centro IDEAL](https://centroideal.cl/), [Algalab](https://www.algalab.com/index2.html#) de la [Universidad de Concepción](https://www.udec.cl/), [Universidad de Valparaíso](https://uv.cl/), investigadores de la [Universidad Nacional de Tierra del Fuego](https://untdf.edu.ar/), funcionarios de la [Secretaría de Ambiente de Tierra del Fuego](https://prodyambiente.tierradelfuego.gob.ar/secretaria-de-ambiente/), personal de la [Wildlife Conservation Society](https://chile.wcs.org/) de Chile, y [clubes de ciencia de Tierra del Fuego](https://cyt.tierradelfuego.gob.ar/club-de-ciencias/):
 
+- [Parque Nacional Tierra del Fuego](https://turismoushuaia.com/zonas/parque-nacional/)
 - [Monte León](https://www.argentina.gob.ar/parquesnacionales/monteleon)
 - [Parques Interjurisdiccionales Marino Costero Patagonia Austral](https://www.argentina.gob.ar/parquesnacionales/marinocostero): 
   + [Isla Pingüino](https://www.argentina.gob.ar/parquesnacionales/islapinguino)
 - [Parque Karukinka](https://chile.wcs.org/Karukinka.aspx)
+
+<br><br>
+
+# **Lista de Participantes**
+```{r}
+read_excel("docs/participants_list_tdf2024.xlsx") %>%
+  kable()
+```
 
 </h2>
 
