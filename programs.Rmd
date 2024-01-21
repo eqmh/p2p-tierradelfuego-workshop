@@ -23,18 +23,19 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## **DIA 2 -- Martes 23 de enero** 
 
--   Muestreo del intermareal con fotocuadrantes en Bahía de Ushuaia
+-   Muestreo del intermareal con foto-cuadrantes en [Parque Nacional Tierra del Fuego](https://turismoushuaia.com/zonas/parque-nacional/) (Lapataia)
 -   Uso de cámaras y equipos para muestreo de biodiversidad intermareal 
 -   Optimización de fotografías para utilizar inteligencia artificial, uso de software de imágenes 
 -   Utilización de software de inteligencia artificial para análisis de biodiversidad marina <br> <br>
 
 ## **DIA 3 -- Miércoles 24 de enero** 
 
--   Muestreo del intermareal con foto-cuadrantes en [Parque Nacional Tierra del Fuego](https://turismoushuaia.com/zonas/parque-nacional/) (Lapataia)
--   Trabajo en grupos: Optimización de fotografías y uso de software de inteligencia artificial para análisis de biodiversidad marina <br> <br>
+- Análisis de fotografías digitales con IA tomadas durante la capacitación
+- Trabajo en grupos: Optimización de fotografías y uso de software de inteligencia artificial para análisis de biodiversidad marina <br> <br>
 
 ## **DIA 4 -- Jueves 25 de enero** 
 
+-   Muestreo del intermareal con fotocuadrantes en Bahía de Ushuaia
 -   Continuación de análisis de fotografías digitales con IA tomadas durante la capacitación
 -   Manejo de imágenes y metadatos
 -   Generación de reporte de indicadores de biodiversidad con [tableros interactivos](https://marinebon.github.io/p2p-dashboard/biodivExplorer_beach.html#general-information) <br> <br>
