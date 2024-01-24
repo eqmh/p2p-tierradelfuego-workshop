@@ -37,6 +37,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 -   Muestreo del intermareal con fotocuadrantes en Bahía de Ushuaia
 -   Continuación de análisis de fotografías digitales con IA tomadas durante la capacitación
+-   Presentación invitada: La Red de Observación Marina Argentina (ROMA) - Dr. Gustavo Ferreyra (Director del CADIC-CONICET)
 -   Manejo de imágenes y metadatos
 -   Generación de reporte de indicadores de biodiversidad con [tableros interactivos](https://marinebon.github.io/p2p-dashboard/biodivExplorer_beach.html#general-information) <br> <br>
 
