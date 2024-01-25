@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ## **DIA 1 -- Lunes 22 de enero**
 
 -   Teoría sobre biodiversidad de ambientes intermareales rocosos de Patagonia
--   Protocolos de muestreo de biodiversidad del litoral rocoso con foto-cuadrantes
+-   [**Protocolos de muestreo**](https://marinebon.github.io/p2p/methods_field_protocols.html) de biodiversidad del litoral rocoso con foto-cuadrantes
 -   Demostración de datos previos y plataforma MBON para detectar cambios de biodiversidad <br> <br>
 
 ## **DIA 2 -- Martes 23 de enero** 
@@ -49,6 +49,8 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 -   Entrega formal de equipamiento para muestreo a largo plazo <br> <br>
 
 ## [**Agenda detallada**](Taller_fotocuadrantes_TDF_agenda.pdf)
+
+## [**Protocolo de muestreo de biodiversidad marina con foto-cuadrantes**](https://marinebon.github.io/p2p/methods_field_protocols.html)
 <br>
 <br>
 ```{r}
@@ -60,7 +62,8 @@ pts <- tribble(
         ~lon,       ~lat,       ~name,    ~icon,   ~color,          ~description, ~comment,
   -68.3289, -54.8225,  "CADIC", "home", "red", "CADIC", NA,
   -68.4845, -54.8475,  "Ensenada Zaratiegui", "child", "orange", "Ensenada Zaratiegui", NA,
-  -68.47122, -54.83394, "Estación Parque Nacional Tierra del Fuego", "home", "blue", "Parque Natl. TDF", NA) %>%
+  -68.47122, -54.83394, "Estación Parque Nacional Tierra del Fuego", "home", "blue", "Parque Natl. TDF", NA,
+  -68.219527, -54.80648, "Playa Larga", "child", "orange", "Playa Larga", NA) %>%
   st_as_sf(coords = c("lon", "lat"), crs = 4326)
 ctr <- pts$geometry %>% st_geometrycollection() %>% st_centroid() %>% st_coordinates()
 icons <- awesomeIcons(
